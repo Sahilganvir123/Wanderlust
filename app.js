@@ -3,7 +3,7 @@ if (process.env.NODE_ENV != "production"){
 }
 
 
-console.log(process.env.SECRET);
+// console.log(process.env.SECRET);
 
 const express = require("express");
 const app = express();
@@ -36,6 +36,14 @@ main().then(()=>{
 async function main() {
   await mongoose.connect(atlasDb_Url);
 }
+// const connectToDB = async () => {
+//   try {
+//     await mongoose.connect(atlasDb_Url);
+//     console.log('Connected to DB');
+//   } catch (err) {
+//     console.error(`Error while connecting to DB: ${err.message}`);
+//   }
+// };
 
 app.set("view engine","ejs");
 app.set("views", path.join(__dirname),"views");
@@ -116,6 +124,10 @@ app.use((err,req,res,next) => {
 //     res.send("something went wrong!")
 // })
 
-app.listen(8080,()=>{
+app.listen(8080,async()=>{
     console.log("app is listining on port 8080");
-})
+});
+// app.listen(8080, async()=>{
+// await connectToDB()
+//     console.log("app is listining on port 8080");
+// })
