@@ -1,0 +1,60 @@
+<%= layout("/views/layouts/boilerplate.ejs") %>
+<body>
+    <div class="col-8 offset-2">
+        <br><br>
+    <h3>Create a new Listing</h3>
+    
+    <form novalidate class="needs-validation" method="post" action="/listings" enctype="multipart/form-data">
+        <div class="mb-3">
+        <label  for="title" class="form-label">Title</label>
+        <input required name="listing[title]" placeholder="Enter Title" type="text" class="form-control">
+        <div class="valid-feedback">
+         Looks good!
+        </div>
+        <div class="invalid-feedback">Title should be required</div>
+        </div>
+
+        <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <textarea required name="listing[description]" class="form-control"></textarea> 
+        <div class="invalid-feedback">Description should be required</div>
+        </div>
+
+
+        <div class="mb-3">
+        <label for="Image" class="form-label">Image</label>
+        <input name="listing[image]" placeholder="Enter image/URL" type="file" class="form-control">
+        </div>
+
+        <div class="row">
+
+            <div class="mb-3 col-md-4">
+        <label for="Price" class="form-label">Price</label>
+        <input required name="listing[price]"  placeholder="Enter Price" type="number" class="form-control">
+        <div class="invalid-feedback">Price should be required</div>
+        </div>
+
+        <div class="mb-3 col-md-8">
+        <label for="Country" class="form-label">Country</label>
+        <input required name="listing[country]" placeholder="Enter Country" type="text" class="form-control">
+        <div class="invalid-feedback">Country should be required</div>
+        </div>
+
+        </div>
+
+        
+
+
+
+        <div class="mb-3">
+        <label for="Location" class="form-label">Location</label>
+        <input required name="listing[location]" placeholder="Enter Location" type="text" class="form-control">
+        <div class="invalid-feedback">Location should be required</div>
+        </div>
+
+
+        
+        <button class="btn btn-dark add-btn">ADD</button>
+    </form>
+    </div>
+</body>

@@ -1,0 +1,131 @@
+<%= layout("/views/layouts/boilerplate.ejs") %>
+
+<!-- <style>
+    .heding{
+        display: flex;
+    }
+    .categary{
+        scrollbar-width: none;
+        overflow: auto;
+        display: flex;
+        flex-direction: row;
+        /* background-color: aqua; */
+        width: 80%;
+        margin-left: -1.2rem;
+    }
+    .icons{
+        padding-top: 1rem;
+        font-size: 0.8rem;
+    }
+
+    /* tax btn */
+    .taxBtn{
+        /* background-color: aqua; */
+        border: solid 1px black;
+        width: 21%;
+        padding-top: 0.8%;
+        padding-bottom: 0.8%;
+        padding-right: 2%;
+        border-radius: 12px;
+        height: 20%;
+        margin-top: 0.8%;
+    }
+    .tax-info{
+        display: none;
+    }
+    @media(max-width: 990px){
+        .icons{
+            padding-left: 5%;
+        }
+        .tax-text{
+            display: none;
+        }
+        .taxBtn{
+            margin-top: 3%;
+        }
+    }
+
+</style> -->
+<body>
+    <!-- <h3>All Listings</h3> -->
+    <div class="heding">
+        
+
+      <div class="categary">
+        <div class="icons">
+            <div><i class="fa-solid fa-fire"></i></div>
+            <p>Treding</p>
+        </div>
+        <div class="icons">
+            <div><i class="fa-solid fa-bed"></i></div>
+            <p>Rooms</p>
+        </div>
+        <div class="icons">
+            <div><i class="fa-solid fa-tree-city"></i></div>
+            <p>Iconic cities</p>
+        </div>
+        <div class="icons">
+            <div><i class="fa-solid fa-mountain-sun"></i></div>
+            <p>Mountains</p>
+        </div>
+        <div class="icons">
+            <div><i class="fa-brands fa-fort-awesome"></i></div>
+            <p>Casties</p>
+        </div>
+        <div class="icons">
+            <div><i class="fa-solid fa-person-swimming"></i></div>
+            <p>Amazing pools</p>
+        </div>
+        <div class="icons">
+            <div><i class="fa-solid fa-campground"></i></div>
+            <p>Camping</p>
+        </div>
+        <div class="icons">
+            <div><i class="fa-solid fa-cow"></i></div>
+            <p>Farms</p>
+        </div>
+        <div class="icons">
+            <div><i class="fa-solid fa-snowflake"></i></div>
+            <p>Arctic</p>
+        </div>
+        <div class="icons">
+            <div><i class="fa-solid fa-igloo"></i></div>
+            <p>Doms</p>
+        </div>
+        <div class="icons">
+            <div><i class="fa-solid fa-sailboat"></i></div>
+            <p>Boats</p>
+        </div> 
+     </div>
+    <div class="taxBtn">
+        <div class="form-check-reverse form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+  <label class="form-check-label" for="switchCheckDefault"><b class="tax-text">display total after</b> <b>Taxes</b></label>
+       </div>
+    </div>
+</div>
+    <!-- <form method="get" action="/listings/new">
+        <button>Create New Listing</button>
+    </form> -->
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+        <% for (Listings of allListings){ %>
+            <a href="/listings/<%=Listings._id%>" class="listing-link">
+            <div class="card listing-card">
+      <img src="<%=Listings.image.url%>" class="card-img-top" style="height: 20rem;" alt="...">
+           <div class="card-img-overlay"></div>
+      <div class="card-body">
+           <b><%=Listings.title%></b>
+           <p>&#8377;<%=Listings.price.toLocaleString("en-IN")%>/night 
+           <i class="tax-info">&nbsp; &nbsp;+18% gst</i>
+           </p>
+           </div>
+           </div>
+           </a>
+        <%}%>
+        </div>
+
+</body>
+
+<script src="/js/taxBtn.js">
+    
+</script>

@@ -1,0 +1,162 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+  flex: 1;
+}
+
+
+
+ .navbar{
+    height: 5rem;
+ }
+ .fa-compass{
+    font-size: 2rem;
+    color: #fe424d;
+ }
+ .nav-link{
+    color: #222222 !important;
+ }
+
+ /* footer */
+ .footer{
+   background-color: #ebebeb;
+   height: 8rem;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+ .icons{
+   width: 100%;
+   text-align: center;
+   font-size: 1.2rem;
+ }
+ #p{
+   width: 100%;
+   text-align: center;
+ }
+.terms {
+   width: 100%;
+   text-align: center;
+ }
+ .terms a{
+   color: #222222;
+   text-decoration: none;
+ }
+  .terms a:hover{
+   text-decoration: underline;
+  }
+
+
+  /* Card */
+  .listing-card{
+   border: none !important;
+   margin-bottom: 2rem;
+  }
+  .card-img-top{
+   border-radius: 1rem !important;
+   width: 100% !important;
+   object-fit: cover !important;
+  }
+  .card-body{
+   padding: 0 !important;
+  }
+
+  .listing-link{
+   text-decoration: none;
+  }
+  
+  /* Card Effect */
+  .card-img-overlay{
+   opacity: 0;
+  }
+  .card-img-overlay:hover{
+   opacity: 0.2;
+   background-color: white;
+  }
+
+  /* CreatePage */
+  .btn{
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  .add-btn{
+    background-color:#fe424d !important;
+    border: none !important;
+  }
+
+  /* EditPage */
+  .edit-btn{
+    background-color:#fe424d !important;
+    border: none !important;
+  }
+
+  /* ShowPage */
+  .show-img{
+    height: 40vh;
+    width: 100vh;
+  }
+.btns{
+  display: flex;
+}
+
+#map
+ { 
+  height:100%;
+  width: 100%;
+}
+
+.mapStyle{
+  height: 50vh;
+  width: 80vh;
+}
+
+
+/* Listing-Categary */
+
+ .heding{
+        display: flex;
+    }
+    .categary{
+        scrollbar-width: none;
+        overflow: auto;
+        display: flex;
+        flex-direction: row;
+        /* background-color: aqua; */
+        width: 80%;
+        margin-left: -1.2rem;
+    }
+    .icons{
+        padding-top: 1rem;
+        font-size: 0.8rem;
+    }
+
+    /* tax btn */
+    .taxBtn{
+        /* background-color: aqua; */
+        border: solid 1px black;
+        width: 21%;
+        padding-top: 0.8%;
+        padding-bottom: 0.8%;
+        padding-right: 2%;
+        border-radius: 12px;
+        height: 20%;
+        margin-top: 0.8%;
+    }
+    .tax-info{
+        display: none;
+    }
+    @media(max-width: 990px){
+        .icons{
+            padding-left: 5%;
+        }
+        .tax-text{
+            display: none;
+        }
+        .taxBtn{
+            margin-top: 3%;
+        }
+    }
